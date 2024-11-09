@@ -1,0 +1,188 @@
+@import normalizez
+@import resets
+
+$font: 'Poppins', sans-serif
+
+.container
+    max-width: 1240px
+    margin: 0 auto
+
+a
+    text-decoration: none
+    color: #253746
+
+
+.nav-menu
+    padding-top: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 64px
+    &__item
+        display: flex
+        flex-direction: row
+    &__item-list
+        margin-right: 50px
+        font-size: 16px
+        font-family: Poppins, sans-serif
+        &:last-child
+            margin-right: 0px
+
+
+#login-div 
+    display: none
+
+
+#go-to-login-button 
+    width: 150px
+    background-color: #253746
+    color: #fff
+    cursor: pointer
+    border-radius: 5px
+    border: 1px solid #ccc
+    padding: 10px
+
+
+#go-to-register-button 
+    width: 150px
+    background-color: #253746
+    color: #fff
+    cursor: pointer
+    border-radius: 5px
+    border: 1px solid #ccc
+    padding: 10px
+
+
+.registration-form-container 
+    max-width: 400px
+    padding: 30px
+    margin: 0 auto
+    margin-bottom: 64px
+
+h1 
+    text-align: center
+    margin-bottom: 60px
+    font-size: 32px
+
+
+form 
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+
+label 
+    font-weight: bold
+
+
+input 
+    padding: 10px
+    border: 1px solid #ccc
+    border-radius: 5px
+
+
+input[type="submit"] 
+    background-color: #253746
+    color: #fff
+    cursor: pointer
+
+
+/* Стили для анимации ошибки */
+
+.error 
+    background-color: #ff0000
+    color: #fff
+    padding: 10px
+    margin-top: 10px
+    animation: error-animation 1s ease-in-out
+    border-radius: 5px
+
+
+@keyframes error-animation 
+    0% 
+        opacity: 0
+        transform: translateY(-20px)
+    
+
+    100% 
+        opacity: 1
+        transform: translateY(0)
+    
+
+
+/* Стили для проверки валидности полей */
+
+input:invalid 
+    border-color: #ff0000
+
+.fourth-section
+    background-color: #253746
+    background-size: 100% auto
+    height: 256px
+    // max-width: 1240px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    &__back
+        display: flex
+        justify-content: flex-start
+        // width: 1240px
+        // margin: 0 auto
+    &__container
+        display: flex
+        margin: 0 auto
+        justify-content: flex-start
+        align-items: center
+        
+        // width: 1240px
+        &__nav-1
+            display: flex
+            flex-direction: column
+            margin-right: 74px
+            &__info
+                display: flex
+                flex-direction: column
+                width: 161px
+                font-size: 12px
+                font-family: $font
+                &__addres
+                    margin-top: 44px
+                    color: #60607B
+                    margin-bottom: 5px
+                &__ul
+                    color: white
+                    margin-bottom: 20px
+                &__phone
+                    color: #60607B
+                    margin-bottom: 5px
+                &__number
+                    color: white
+                    margin-bottom: 20px
+        &__email
+            display: flex
+            &__img
+                margin-right: 9px
+            &__emailcl
+                color: white
+        &__nav-2
+            margin-right: 74px
+            margin-top: 44px
+            margin-left: 74px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__nav-3
+            margin-top: 44px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        
+.nav-header
+    display: flex
+    font-family: $font
+    font-weight: 600
+    color: white
+    font-size: 12px
+    height: 88px
+        
+.address-header

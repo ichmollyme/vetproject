@@ -1,0 +1,295 @@
+@import normalizez
+@import resets
+
+
+$font: 'Poppins', sans-serif
+
+
+
+
+*
+    box-sizing: border-box
+    
+a
+    text-decoration: none
+    color: #253746
+
+.container
+    max-width: 1240px
+    margin: 0 auto
+
+    
+
+.main-section
+    padding-top: 20px
+    position: relative
+    overflow: hidden
+    margin-bottom: 71px
+
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 87px
+        align-items: center
+        margin-bottom: 85px
+    &__content-dog
+        position: relative
+        display: flex
+        margin-left: auto
+        z-index: 800
+    &__content-paw
+        position: absolute
+        top: 140px
+        left: -165px
+        display: inline-flex
+    &__title
+        position: absolute
+        font-size: 32px
+        font-family: Poppins, sans-serif
+        top: 372px
+        margin-bottom: 54px
+    &__span
+        font-weight: 700
+        font-style: bold
+    &__button
+        position: absolute
+        top: 580px
+        width: 340px
+        height: 95px
+        flex-grow: 0
+        // margin: 54px 122px 0 0
+        // padding: 32px 65px 33px
+        border-radius: 100px
+        background-color: #253746
+        width: 340px
+        height: 95px
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25)
+        font-size: 20px
+        text-align: center
+        font-family: Poppins, sans-serif
+        color: #f4f4f4
+
+
+.nav-menu
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__item
+        display: flex
+        flex-direction: row
+    &__item-list
+        margin-right: 50px
+        font-size: 16px
+        font-family: Poppins, sans-serif
+        &:last-child
+            margin-right: 0px
+
+
+.second-section
+    position: relative
+    &__title-about
+        font-family: $font
+        font-weight: 700
+        font-style: bold
+        font-size: 32px
+        margin-bottom: 14px
+    &__paragraph
+        font-family: $font
+        padding: 16px 0 16px 0
+        font-size: 30px
+        border-top: 2px solid black
+        border-bottom: 2px solid black
+        margin-bottom: 158px
+    &__section__layout
+        display: flex
+        justify-content: flex-end
+
+.about-section
+    margin-bottom: 70px
+    display: flex
+    justify-content: space-between
+    width: 1240px
+    &__content
+        display: flex
+        width: 1240px
+        justify-content: space-between
+        &__left
+            display: flex
+        &__right
+            display: flex
+            flex-direction: column
+            width: 533px
+            &__header
+                display: flex
+                font-family: $font
+                font-size: 32px
+                font-weight: 700
+                margin-bottom: 46px
+            &__text
+                display: flex
+                flex-direction: column
+                font-family: $font
+                font-size: 18px
+                justify-content: space-between
+                height: 500px
+                width: 440px
+                letter-spacing: 1px
+                &__block-1
+                    // display: flex
+                &__block-2
+                    // display: flex
+                &__block-3
+                    // display: flex
+    &__span
+        font-weight: 700
+
+
+
+.third-section
+    display: flex
+    background-color: #FFFCEC
+    background-size: 100% auto
+    margin: 0 auto
+    height: 812px
+    // overflow: hidden
+    &__content
+        width: 1240px
+        padding-top: 63px
+        &__header
+            margin-bottom: 58px
+            font-family: $font
+            font-weight: 700
+            font-size: 32px
+        &__colums
+            display: flex
+            justify-content: space-between
+            &__left
+                display: flex
+                flex-direction: column
+                height: 577px
+                justify-content: space-between
+                // margin-right: 150px
+                &__inner
+                    width: 480px
+                    display: flex
+                &__img
+                    display: flex
+                    flex-direction: column
+                    margin-right: 68px
+                &__text
+                    font-family: $font
+                    display: flex
+                    flex-direction: column
+                    &__zag
+                        font-size: 24px
+                        font-weight: 700
+                        margin-bottom: 10px
+                    &__p
+                        font-size: 18px
+            &__right
+                display: flex
+                flex-direction: column
+                height: 577px
+                justify-content: space-between
+                &__inner
+                    width: 480px
+                    display: flex
+                &__img
+                    display: flex
+                    flex-direction: column
+                    margin-right: 68px
+                &__text
+                    font-family: $font
+                    display: flex
+                    flex-direction: column
+                    &__zag
+                        font-size: 24px
+                        font-weight: 700
+                        margin-bottom: 10px
+                    &__p
+                        font-size: 18px
+
+
+
+
+.fourth-section
+    background-color: #253746
+    background-size: 100% auto
+    height: 256px
+    // max-width: 1240px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    &__back
+        display: flex
+        justify-content: flex-start
+        // width: 1240px
+        // margin: 0 auto
+    &__container
+        display: flex
+        margin: 0 auto
+        justify-content: flex-start
+        align-items: center
+        
+        // width: 1240px
+        &__nav-1
+            display: flex
+            flex-direction: column
+            
+            &__info
+                display: flex
+                flex-direction: column
+                width: 161px
+                font-size: 12px
+                font-family: $font
+                &__addres
+                    margin-top: 44px
+                    color: #60607B
+                    margin-bottom: 5px
+                &__ul
+                    color: white
+                    margin-bottom: 20px
+                &__phone
+                    color: #60607B
+                    margin-bottom: 5px
+                &__number
+                    color: white
+                    margin-bottom: 20px
+        &__email
+            display: flex
+            &__img
+                margin-right: 9px
+            &__emailcl
+                color: white
+        &__nav-2
+            margin-right: 74px
+            margin-left: 74px
+            margin-top: 44px
+            
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__nav-3
+            margin-top: 44px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        
+.nav-header
+    display: flex
+    font-family: $font
+    font-weight: 600
+    color: white
+    font-size: 12px
+    height: 88px
+        
+.address-header
+    
+
+
+
+
+
+
+

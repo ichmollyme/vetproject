@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/lk.css">
+    <title>Регистрация</title>
+</head>
+
+<body>
+    <div class="container nav-menu">
+        <div class="nav-menu__logo">
+            <a href="index.html"><img src="../assets/logo/logo.svg" alt=""></a>
+        </div>
+        <div class="nav-menu__nav">
+            <ul class="nav-menu__item">
+                <li class="nav-menu__item-list"><a href="analiz.html">Лаборатория</a></li>
+                <li class="nav-menu__item-list"><a href="doctors.html">Наши врачи</a></li>
+                <li class="nav-menu__item-list"><a href="services.html">Услуги</a></li>
+                <li class="nav-menu__item-list"><a href="lk.html">Личный кабинет</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="registration-div" class="registration-form-container">
+        <h1>Регистрация</h1>
+        <form id="registration-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password">
+
+            <label for="password-repeat">Повторите пароль:</label>
+            <input type="password" id="password-repeat">
+
+            <input type="submit" value="Зарегистрироваться">
+
+            <button id="go-to-login-button">Есть аккаунт</button>
+        </form>
+
+    </div>
+
+    <div id="login-div" class="registration-form-container">
+        <h1>Логин</h1>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password">
+
+            <input type="submit" value="Войти">
+
+            <button id="go-to-register-button">Зарегистрироваться</button>
+        </form>
+
+    </div>
+
+    <div class="fourth-section">
+        <div class=" fourth-section__back">
+            <div class="fourth-section__container">
+                <div class="fourth-section__nav-1">
+                    <div class="fourth-section__container__nav-1__info">
+                        <p class="fourth-section__container__nav-1__info__addres">Адрес:</p>
+                        <p class="fourth-section__container__nav-1__info__ul">Москва, м. Новые Черемушки, ул. Цюрупы, 13
+                        </p>
+                        <p class="fourth-section__container__nav-1__info__phone">Телефон:</p>
+                        <p class="fourth-section__container__nav-1__info__number">+7 499 762-43-65</p>
+                        <div class="fourth-section__container__email">
+                            <img src="../assets/icons/email-svg.svg" alt=""
+                                class="fourth-section__container__email__emailcl">
+                            <p class="fourth-section__container__email__emailcl">clinic@healingpaws.ru</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fourth-section__container__nav-2 nav-header">
+                    <p>Выезд на дом</p>
+                    <p>Отзывы и предложения</p>
+                    <p>Контакты для СМИ</p>
+                </div>
+                <div class="fourth-section__container__nav-3 nav-header">
+                    <p>Вакансии</p>
+                    <p>Новости</p>
+                    <p>Наши специалисты</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginDiv = document.getElementById('login-div');
+        const registerDiv = document.getElementById('registration-div');
+
+        const goToLoginButton = document.getElementById('go-to-login-button');
+        const goToRegisterButton = document.getElementById('go-to-register-button');
+
+        goToLoginButton.addEventListener('click', (event) => {
+            registerDiv.style.display = 'none';
+            loginDiv.style.display = 'block';
+        });
+
+        goToRegisterButton.addEventListener('click', (event) => {
+            loginDiv.style.display = 'none';
+            registerDiv.style.display = 'block';
+        });
+
+
+        const form = document.getElementById('registration-form');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const passwordRepeat = document.getElementById('password-repeat').value;
+
+            if (!validateEmail(email)) {
+                showError('Неверный формат email');
+                return;
+            }
+
+            if (password.length < 8) {
+                showError('Пароль должен быть не менее 8 символов');
+                return;
+            }
+
+            if (password !== passwordRepeat) {
+                showError('Пароли не совпадают');
+                return;
+            }
+
+        });
+
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function showError(message) {
+            const errorElement = document.createElement('div');
+            errorElement.classList.add('error');
+            errorElement.textContent = message;
+
+            const formContainer = document.querySelector('.registration-form-container');
+            formContainer.appendChild(errorElement);
+
+            setTimeout(() => {
+                errorElement.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

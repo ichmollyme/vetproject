@@ -1,0 +1,154 @@
+@import normalizez
+@import resets
+
+$font: 'Poppins', sans-serif
+
+*
+    box-sizing: border-box
+
+.container
+    max-width: 1240px
+    margin: 0 auto
+
+a
+    text-decoration: none
+    color: #253746
+
+
+
+.nav-menu
+    padding-top: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 64px
+    &__item
+        display: flex
+        flex-direction: row
+    &__item-list
+        margin-right: 50px
+        font-size: 16px
+        font-family: Poppins, sans-serif
+        &:last-child
+            margin-right: 0px
+
+.main-section
+    position: relative
+    overflow: hidden
+    height: 807px
+    // &__content-paw
+    //         position: absolute
+    //         top: 140px
+    //         left: -165px
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 59px
+        &__header
+            display: flex
+            flex-direction: column
+            font-family: $font
+            align-items: center
+            width: 480px
+            &__zag
+                display: flex
+                font-size: 24px
+                font-weight: 700
+                margin-bottom: 17px
+            &__p
+                display: flex
+                font-size: 12px
+
+
+.second-section
+    &__services
+        &__block
+            display: flex
+            justify-content: space-between
+            &__info
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                padding: 30px
+                width: 220px
+                height: 220px
+                background-color: #253746
+                border-radius: 30px
+            &__p
+                font-family: $font
+                font-size: 24px
+                color: #ffffff
+            &__img
+                display: flex
+                justify-content: flex-end
+
+.fourth-section
+    background-color: #253746
+    background-size: 100% auto
+    height: 256px
+    // max-width: 1240px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    &__back
+        display: flex
+        justify-content: flex-start
+        // width: 1240px
+        // margin: 0 auto
+    &__container
+        display: flex
+        margin: 0 auto
+        justify-content: flex-start
+        align-items: center
+        
+        // width: 1240px
+        &__nav-1
+            display: flex
+            flex-direction: column
+            margin-right: 74px
+            &__info
+                display: flex
+                flex-direction: column
+                width: 161px
+                font-size: 12px
+                font-family: $font
+                &__addres
+                    margin-top: 44px
+                    color: #60607B
+                    margin-bottom: 5px
+                &__ul
+                    color: white
+                    margin-bottom: 20px
+                &__phone
+                    color: #60607B
+                    margin-bottom: 5px
+                &__number
+                    color: white
+                    margin-bottom: 20px
+        &__email
+            display: flex
+            &__img
+                margin-right: 9px
+            &__emailcl
+                color: white
+        &__nav-2
+            margin-right: 74px
+            margin-top: 44px
+            margin-left: 74px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        &__nav-3
+            margin-top: 44px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+.nav-header
+    display: flex
+    font-family: $font
+    font-weight: 600
+    color: white
+    font-size: 12px
+    height: 88px
